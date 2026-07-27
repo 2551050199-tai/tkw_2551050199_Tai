@@ -1,5 +1,5 @@
 # WEBSITE QUẢN LÝ SƠN
-# 1. Dối tượng sử dụng 
+# 1. Đối tượng sử dụng 
 - Đại lý kinh doanh sơn.
 # 2. Giá trị mang lại 
 - Giúp đại lý quản lý vỏ thùng & hàng khuyến mãi.
