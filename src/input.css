@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  /* Màu sắc theo tài liệu */
+  --color-brand-50: #eff6ff; /* Màu nền phụ trợ cho badge */
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-accent-500: #f59e0b;
+  
+  --color-ink: #1f2937;
+  --color-muted: #6b7280;
+  --color-surface: #f9fafb;
+  --color-surface-alt: #f3f4f6;
+  --color-line: #e5e7eb;
+
+  /* Phông chữ */
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-sans: 'Roboto', sans-serif; /* Đặt Roboto làm mặc định */
+
+  /* Bo góc */
+  --radius-card: 8px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+}
