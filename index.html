@@ -1,1 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Sơn — Phần mềm quản lý đại lý sơn</title>
+  <meta name="description" content="Phần mềm giúp đại lý kinh doanh sơn quản lý vỏ thùng, hàng khuyến mãi, sơn Base & Tinh màu, kiểm soát lô và hạn sử dụng dễ dàng." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Thay đổi phông chữ thành Inter và Roboto theo README -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+
+<body>
+
+  <a href="#main"
+     class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50">
+    Bỏ qua đến nội dung chính
+  </a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4"
+         aria-label="Điều hướng chính">
+
+      <a href="./index.html" class="flex items-center gap-2.5">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600
+                     font-display text-lg font-extrabold text-white">S</span>
+        <span class="font-display text-xl font-extrabold">Sơn</span>
+      </a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+        <li><a href="#cach-hoat-dong" class="hover:text-brand-600">Cách hoạt động</a></li>
+        <li><a href="#bang-gia" class="hover:text-brand-600">Bảng giá</a></li>
+        <li><a href="#cau-hoi" class="hover:text-brand-600">Câu hỏi</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="#cta" class="btn btn-primary hidden lg:inline-flex">Dùng thử 30 ngày</a>
+
+        <button type="button"
+                class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden"
+                aria-expanded="false" aria-controls="nav-mobile" aria-label="Mở menu">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="nav-mobile" class="hidden border-t border-line px-5 pb-6 pt-4 lg:hidden">
+      <ul class="flex flex-col gap-1 text-base font-medium">
+        <li><a href="#tinh-nang" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Tính năng</a></li>
+        <li><a href="#cach-hoat-dong" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Cách hoạt động</a></li>
+        <li><a href="#bang-gia" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Bảng giá</a></li>
+        <li><a href="#cau-hoi" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Câu hỏi</a></li>
+      </ul>
+      <a href="#cta" class="btn btn-primary btn-lg mt-4 w-full">Dùng thử 30 ngày</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16"
+             aria-labelledby="hero-title">
+
+      <div>
+        <p class="eyebrow">Dành cho đại lý kinh doanh sơn</p>
+
+        <h1 id="hero-title" class="mt-4 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
+          Quản lý vỏ thùng.<br />
+          Kiểm soát tinh màu.
+        </h1>
+
+        <p class="mt-6 max-w-lg text-lg text-muted">
+          Giúp đại lý dễ dàng theo dõi sơn Base & Tinh màu, quản lý vỏ thùng, hàng khuyến mãi, kiểm soát lô và hạn sử dụng nhanh chóng ngay trên điện thoại.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#cta" class="btn btn-primary btn-lg">Dùng thử 30 ngày</a>
+          <a href="#cach-hoat-dong" class="btn btn-ghost btn-lg">Xem cách hoạt động</a>
+        </div>
+
+        <p class="mt-5 text-sm text-muted">
+          Quản lý tồn kho chính xác · Cài trong 10 phút · Hỗ trợ qua Zalo
+        </p>
+      </div>
+
+      <div class="ticket mx-auto max-w-sm">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-muted">Phiếu xuất hàng</p>
+            <p class="font-display text-lg font-bold">PX-2607-118</p>
+          </div>
+          <span class="badge bg-brand-50 text-brand-700">Đã giao</span>
+        </div>
+
+        <dl class="mt-6 space-y-3 border-t border-dashed border-line pt-5 text-sm">
+          <div class="flex justify-between">
+            <dt class="text-muted">Khách hàng</dt>
+            <dd class="font-medium">Nhà thầu Anh Hưng</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-muted">Mặt hàng</dt>
+            <dd class="font-medium">Sơn ngoại thất cao cấp</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-muted">Mã Base / Tinh màu</dt>
+            <dd class="font-medium">Base A / 5 ống màu</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-muted">Lô / HSD</dt>
+            <dd class="font-medium">L-205 / 12-2027</dd>
+          </div>
+        </dl>
+
+        <div class="mt-5 flex items-end justify-between border-t border-dashed border-line pt-5">
+          <span class="text-sm text-muted">Thành tiền</span>
+          <span class="font-display text-2xl font-extrabold text-brand-600">18.450.000 ₫</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 2 — DẢI KHÁCH HÀNG ===================== -->
+    <section aria-labelledby="doitac-title" class="border-y border-line bg-surface-alt py-8">
+      <div class="mx-auto max-w-6xl px-5">
+        <h2 id="doitac-title" class="sr-only">Đang được dùng tại 340 đại lý sơn trên toàn quốc</h2>
+        <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-lg font-medium text-muted sm:text-xl">
+          <li>Đại lý Sơn Phát Đạt</li>
+          <li>NPP Hưng Thịnh</li>
+          <li>Cửa hàng Ánh Dương</li>
+          <li>Đại lý Màu Sắc Việt</li>
+          <li>Kho sơn Thanh Bình</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 2 — TÍNH NĂNG ========================= -->
+    <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="mx-auto max-w-6xl px-5 py-24">
+      <div class="text-center">
+        <p class="eyebrow">Tính năng</p>
+        <h2 id="tinh-nang-title" class="mt-3 text-3xl font-extrabold sm:text-4xl">Giải quyết triệt để nỗi lo của đại lý sơn</h2>
+        <p class="mt-4 text-lg text-muted">Không còn thất thoát tinh màu hay lẫn lộn hàng khuyến mãi. Mọi thứ được số hóa trên một hệ thống.</p>
+      </div>
+
+      <ul class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="card">
+          <span class="mb-5 grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </span>
+          <h3 class="text-xl font-bold">Quản lý Sơn Base & Tinh màu</h3>
+          <p class="mt-2 text-muted">Theo dõi chính xác lượng tinh màu đã pha cho từng đơn hàng. Kiểm soát tồn kho sơn Base theo từng mã màu.</p>
+        </li>
+        <li class="card">
+          <span class="mb-5 grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </span>
+          <h3 class="text-xl font-bold">Quản lý vỏ thùng & Khuyến mãi</h3>
+          <p class="mt-2 text-muted">Ghi nhận chặt chẽ số lượng vỏ thùng thu hồi. Quản lý hàng tặng kèm như cọ, rulo để tránh thất thoát.</p>
+        </li>
+        <li class="card">
+          <span class="mb-5 grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <h3 class="text-xl font-bold">Kiểm soát Lô & Hạn sử dụng</h3>
+          <p class="mt-2 text-muted">Cảnh báo tự động các lô sơn sắp hết hạn sử dụng. Gợi ý xuất kho theo chuẩn FIFO (nhập trước xuất trước).</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- === BÀI TẬP VỀ NHÀ BUỔI 2 — CÁCH HOẠT ĐỘNG ============== -->
+    <section id="cach-hoat-dong" aria-labelledby="cach-title" class="mx-auto max-w-6xl px-5 py-24">
+      <div class="text-center">
+        <p class="eyebrow">Cách hoạt động</p>
+        <h2 id="cach-title" class="mt-3 text-3xl font-extrabold sm:text-4xl">Ba thao tác cho một đơn hàng sơn</h2>
+      </div>
+
+      <ol class="mt-16 grid gap-8 md:grid-cols-3">
+        <li class="relative">
+          <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">1</span>
+          <h3 class="text-xl font-bold">Chọn Base & Tinh màu</h3>
+          <p class="mt-2 text-muted">Nhập mã màu khách chọn, hệ thống tự động tính toán lượng Base và Tinh màu tương ứng để trừ kho.</p>
+        </li>
+        <li class="relative">
+          <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">2</span>
+          <h3 class="text-xl font-bold">Kèm hàng khuyến mãi</h3>
+          <p class="mt-2 text-muted">Thêm cọ, rulo, băng keo vào đơn hàng với giá 0đ hoặc ghi chú thu hồi vỏ thùng rỗng từ khách thầu.</p>
+        </li>
+        <li class="relative">
+          <span class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">3</span>
+          <h3 class="text-xl font-bold">Chốt phiếu xuất</h3>
+          <p class="mt-2 text-muted">Phiếu in ra ghi rõ lô hàng, hạn sử dụng. Công nợ khách hàng và tồn kho cập nhật tức thì.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 3 — SỐ LIỆU =========================== -->
+    <section aria-labelledby="solieu-title" class="mx-auto max-w-4xl px-5 py-24">
+      <h2 id="solieu-title" class="sr-only">Số liệu sử dụng</h2>
+      <dl class="grid rounded-card border border-line bg-surface text-center shadow-sm sm:grid-cols-3 sm:divide-x sm:divide-line">
+        <div class="flex flex-col p-8">
+          <dt class="order-2 mt-2 font-medium text-muted">Đại lý đang dùng hằng ngày</dt>
+          <dd class="order-1 font-display text-4xl font-extrabold text-brand-600">340</dd>
+        </div>
+        <div class="flex flex-col p-8">
+          <dt class="order-2 mt-2 font-medium text-muted">Thùng sơn quản lý mỗi tháng</dt>
+          <dd class="order-1 font-display text-4xl font-extrabold text-brand-600">1,2 triệu</dd>
+        </div>
+        <div class="flex flex-col p-8">
+          <dt class="order-2 mt-2 font-medium text-muted">Tỷ lệ giảm thất thoát tinh màu</dt>
+          <dd class="order-1 font-display text-4xl font-extrabold text-brand-600">98%</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 3 — CẢM NHẬN ========================== -->
+    <section aria-labelledby="camnhan-title" class="mx-auto max-w-6xl px-5 py-24">
+      <h2 id="camnhan-title" class="text-center text-3xl font-extrabold sm:text-4xl">Người dùng nói gì</h2>
+
+      <ul class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <li>
+          <figure class="card flex h-full flex-col justify-between bg-surface-alt">
+            <blockquote class="text-lg text-ink">
+              "Quản lý lượng tinh màu hao hụt luôn là đau đầu nhất. Từ hồi dùng phần mềm, pha bao nhiêu lít cũng kiểm soát được, không lo thất thoát."
+            </blockquote>
+            <figcaption class="mt-6 border-t border-line pt-4">
+              <span class="block font-bold">Anh Tuấn</span>
+              <cite class="text-sm not-italic text-muted">Đại lý Sơn Phát Đạt</cite>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="card flex h-full flex-col justify-between bg-surface-alt">
+            <blockquote class="text-lg text-ink">
+              "Hàng khuyến mãi như cọ, rulo giờ có báo cáo rõ ràng. Vỏ thùng khách trả lại cũng ghi chú đầy đủ, trừ tiền chính xác."
+            </blockquote>
+            <figcaption class="mt-6 border-t border-line pt-4">
+              <span class="block font-bold">Chị Mai</span>
+              <cite class="text-sm not-italic text-muted">NPP Hưng Thịnh</cite>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="card flex h-full flex-col justify-between bg-surface-alt">
+            <blockquote class="text-lg text-ink">
+              "Sơn cận date tự động báo vàng, giúp tôi ưu tiên xuất kho trước. Không còn cảnh hàng để hỏng trong kho phải bỏ đi."
+            </blockquote>
+            <figcaption class="mt-6 border-t border-line pt-4">
+              <span class="block font-bold">Chú Hùng</span>
+              <cite class="text-sm not-italic text-muted">Cửa hàng Ánh Dương</cite>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 4 — BẢNG GIÁ ========================== -->
+    <section id="bang-gia" aria-labelledby="gia-title" class="mx-auto max-w-6xl px-5 py-24">
+      <div class="text-center">
+        <p class="eyebrow">Bảng giá</p>
+        <h2 id="gia-title" class="mt-3 text-3xl font-extrabold sm:text-4xl">Trả theo quy mô đại lý</h2>
+        <p class="mt-4 text-lg text-muted">Đổi gói bất cứ lúc nào. Mùa xây dựng nâng gói, mùa mưa vắng khách hạ gói.</p>
+      </div>
+
+      <ul class="mt-16 grid items-stretch gap-6 lg:grid-cols-3">
+        <li class="card flex h-full flex-col border border-line">
+          <h3 class="text-xl font-bold">Đại lý nhỏ</h3>
+          <p class="mt-2 text-sm text-muted">Một máy pha màu, dưới 50 đơn mỗi ngày.</p>
+          <p class="mt-4 font-display text-4xl font-extrabold">390.000 ₫<span class="text-lg font-normal text-muted">/tháng</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-muted mb-8">
+            <li class="flex items-center gap-2">✓ 2 tài khoản sử dụng</li>
+            <li class="flex items-center gap-2">✓ Quản lý Sơn Base & Tinh màu</li>
+            <li class="flex items-center gap-2">✓ Cảnh báo hạn sử dụng</li>
+          </ul>
+          <a href="#cta" class="btn btn-ghost mt-auto w-full border border-line">Chọn gói này</a>
+        </li>
+
+        <li class="card relative flex h-full flex-col ring-2 ring-brand-600">
+          <span class="absolute -top-3 left-6 rounded-full bg-brand-600 px-3 py-1 text-xs font-bold text-white uppercase tracking-wide">Được chọn nhiều nhất</span>
+          <h3 class="text-xl font-bold">Đại lý vừa</h3>
+          <p class="mt-2 text-sm text-muted">Nhiều máy pha, cần quản lý vỏ thùng & công nợ thầu.</p>
+          <p class="mt-4 font-display text-4xl font-extrabold">890.000 ₫<span class="text-lg font-normal text-muted">/tháng</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-muted mb-8">
+            <li class="flex items-center gap-2">✓ 8 tài khoản sử dụng</li>
+            <li class="flex items-center gap-2">✓ Mọi thứ của gói Đại lý nhỏ</li>
+            <li class="flex items-center gap-2">✓ Quản lý vỏ thùng & hàng khuyến mãi</li>
+            <li class="flex items-center gap-2">✓ Báo cáo công nợ nhà thầu</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary mt-auto w-full">Chọn gói này</a>
+        </li>
+
+        <li class="card flex h-full flex-col border border-line">
+          <h3 class="text-xl font-bold">Chuỗi phân phối</h3>
+          <p class="mt-2 text-sm text-muted">Nhiều chi nhánh kho, cần báo cáo gộp tổng thể.</p>
+          <p class="mt-4 font-display text-4xl font-extrabold">1.990.000 ₫<span class="text-lg font-normal text-muted">/tháng</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-muted mb-8">
+            <li class="flex items-center gap-2">✓ Không giới hạn tài khoản</li>
+            <li class="flex items-center gap-2">✓ Mọi thứ của gói Đại lý vừa</li>
+            <li class="flex items-center gap-2">✓ Báo cáo gộp nhiều chi nhánh</li>
+            <li class="flex items-center gap-2">✓ Quản lý luân chuyển kho</li>
+          </ul>
+          <a href="#cta" class="btn btn-ghost mt-auto w-full border border-line">Liên hệ tư vấn</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 5 — CÂU HỎI THƯỜNG GẶP ================ -->
+    <section id="cau-hoi" aria-labelledby="faq-title" class="mx-auto max-w-6xl px-5 py-24">
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+        
+        <div>
+          <p class="eyebrow">Câu hỏi thường gặp</p>
+          <h2 id="faq-title" class="mt-3 text-3xl font-extrabold sm:text-4xl">Điều đại lý hay hỏi trước khi dùng</h2>
+          <p class="mt-4 text-lg text-muted">Chưa thấy câu của mình? Gửi câu hỏi, chúng tôi trả lời trong ngày làm việc.</p>
+        </div>
+
+        <div class="divide-y divide-line">
+          <div class="py-6 first:pt-0">
+            <h3 class="text-lg font-bold">Phần mềm có kết nối trực tiếp với máy pha màu không?</h3>
+            <p class="mt-2 text-muted">Hệ thống theo dõi định mức và tồn kho tinh màu dựa trên các đơn đã xuất, chạy độc lập linh hoạt với máy pha để bạn dễ dàng đối soát hao hụt cuối ngày.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-bold">Có quản lý được hàng khuyến mãi riêng không?</h3>
+            <p class="mt-2 text-muted">Rất đơn giản, hàng khuyến mãi như cọ, rulo, áo mưa được khai báo trên hệ thống và tự động trừ kho khi bạn tích chọn tặng kèm trong đơn xuất.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-bold">Dữ liệu mã màu và sơn từ file Excel cũ có nhập lên được không?</h3>
+            <p class="mt-2 text-muted">Có. Bạn chỉ cần gửi file Excel danh sách các hãng sơn và mã màu, đội ngũ hỗ trợ sẽ nhập liệu hoàn toàn miễn phí trong tháng đầu.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-bold">Nhân viên bán hàng có thấy được giá vốn của đại lý không?</h3>
+            <p class="mt-2 text-muted">Không. Hệ thống có tính năng phân quyền chặt chẽ, nhân viên chỉ có thể lên đơn theo giá niêm yết mà không thể xem giá gốc nhập từ hãng.</p>
+          </div>
+          <div class="py-6">
+            <h3 class="text-lg font-bold">Việc theo dõi lô và hạn sử dụng có phức tạp không?</h3>
+            <p class="mt-2 text-muted">Phần mềm tự động gán lô khi bạn nhập hàng. Lúc xuất hàng, hệ thống sẽ ưu tiên gợi ý các lô cận date nhất để xuất trước (nguyên tắc FIFO).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === BUỔI 2 · Tiết 5 — CTA =============================== -->
+    <section id="cta" aria-labelledby="cta-title" class="mx-auto max-w-5xl px-5 py-24">
+      <div class="rounded-card bg-brand-600 p-10 text-center text-white sm:p-16">
+        <h2 id="cta-title" class="text-3xl font-extrabold sm:text-4xl">Quản lý kinh doanh sơn chuyên nghiệp ngay hôm nay</h2>
+        <p class="mt-4 text-lg text-brand-50">Cài đặt mất 10 phút. Dùng thử 30 ngày, quản lý ngay từ mã màu đến vỏ thùng.</p>
+        
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="#" class="rounded-lg bg-white px-6 py-3 font-semibold text-brand-600 hover:bg-brand-50">Bắt đầu dùng thử</a>
+          <a href="tel:+842873001234" class="rounded-lg bg-brand-700 px-6 py-3 font-semibold text-white hover:bg-brand-800 border border-brand-500">Gọi 028 7300 1234</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- === BUỔI 2 · Tiết 5 — FOOTER ============================== -->
+  <footer class="bg-surface-alt py-12">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        
+        <div class="lg:col-span-1">
+          <a href="./index.html" class="flex items-center gap-2.5">
+            <span class="grid h-8 w-8 place-items-center rounded bg-brand-600 font-display font-bold text-white">S</span>
+            <span class="font-display text-lg font-extrabold">Sơn</span>
+          </a>
+          <p class="mt-4 text-sm text-muted">Phần mềm chuyên biệt giúp đại lý kinh doanh sơn quản lý vỏ thùng, tinh màu và hạn sử dụng.</p>
+        </div>
+
+        <nav aria-labelledby="footer-sp">
+          <h2 id="footer-sp" class="font-bold">Sản phẩm</h2>
+          <ul class="mt-4 space-y-3 text-sm text-muted">
+            <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+            <li><a href="#bang-gia" class="hover:text-brand-600">Bảng giá</a></li>
+            <li><a href="#cach-hoat-dong" class="hover:text-brand-600">Cách hoạt động</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-ht">
+          <h2 id="footer-ht" class="font-bold">Hỗ trợ</h2>
+          <ul class="mt-4 space-y-3 text-sm text-muted">
+            <li><a href="#cau-hoi" class="hover:text-brand-600">Câu hỏi thường gặp</a></li>
+            <li><a href="tel:+842873001234" class="hover:text-brand-600">028 7300 1234</a></li>
+            <li><a href="mailto:hotro@phanmemson.vn" class="hover:text-brand-600">hotro@phanmemson.vn</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="font-bold">Địa chỉ</h2>
+          <address class="mt-4 text-sm not-italic text-muted leading-relaxed">
+            128 Nguyễn Văn Cừ, Phường An Hòa<br />
+            Quận Ninh Kiều, Cần Thơ
+          </address>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-line pt-8 text-center text-sm text-muted">
+        <p>© 2026 Sơn. Bài thực hành môn Thiết kế Web.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
