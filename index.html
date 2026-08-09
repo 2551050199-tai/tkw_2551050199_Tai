@@ -1,1 +1,342 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Sơn — Phần mềm quản lý đại lý sơn</title>
+    <meta name="description" content="Phần mềm giúp đại lý kinh doanh sơn quản lý vỏ thùng, hàng khuyến mãi, sơn Base & Tinh màu, kiểm soát lô và hạn sử dụng dễ dàng." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"> Bỏ qua đến nội dung chính </a>
+
+    <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+    <header class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Điều hướng chính">
+        <a href="./index.html" class="flex items-center gap-2.5">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 font-display text-lg font-extrabold text-white">S</span>
+          <span class="font-display text-xl font-extrabold">Sơn</span>
+        </a>
+
+        <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
+          <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+          <li><a href="#cach-hoat-dong" class="hover:text-brand-600">Cách hoạt động</a></li>
+          <li><a href="#bang-gia" class="hover:text-brand-600">Bảng giá</a></li>
+          <li><a href="#cau-hoi" class="hover:text-brand-600">Câu hỏi</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <a href="#cta" class="btn btn-primary hidden lg:inline-flex">Dùng thử 30 ngày</a>
+
+          <button type="button" class="grid h-10 w-10 place-items-center rounded-pill border border-line lg:hidden" aria-expanded="false" aria-controls="nav-mobile" aria-label="Mở menu">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div id="nav-mobile" class="hidden border-t border-line px-5 pb-6 pt-4 lg:hidden">
+        <ul class="flex flex-col gap-1 text-base font-medium">
+          <li><a href="#tinh-nang" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Tính năng</a></li>
+          <li><a href="#cach-hoat-dong" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Cách hoạt động</a></li>
+          <li><a href="#bang-gia" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Bảng giá</a></li>
+          <li><a href="#cau-hoi" class="block rounded-lg px-3 py-2.5 hover:bg-surface-alt">Câu hỏi</a></li>
+        </ul>
+        <a href="#cta" class="btn btn-primary btn-lg mt-4 w-full">Dùng thử 30 ngày</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================
+         HERO
+         ============================================================ -->
+      <section class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Dành cho đại lý kinh doanh sơn</p>
+
+          <h1 id="hero-title" class="mt-4 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
+            Quản lý vỏ thùng.<br />
+            Kiểm soát tinh màu.
+          </h1>
+
+          <p class="mt-6 max-w-lg text-lg text-muted">Giúp đại lý dễ dàng theo dõi sơn Base & Tinh màu, quản lý vỏ thùng, hàng khuyến mãi, kiểm soát lô và hạn sử dụng nhanh chóng ngay trên điện thoại.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#cta" class="btn btn-primary btn-lg">Dùng thử 30 ngày</a>
+            <a href="#cach-hoat-dong" class="btn btn-ghost btn-lg">Xem cách hoạt động</a>
+          </div>
+
+          <p class="mt-5 text-sm text-muted">Quản lý tồn kho chính xác · Cài trong 10 phút · Hỗ trợ qua Zalo</p>
+        </div>
+
+        <div class="ticket mx-auto max-w-sm">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-muted">Phiếu xuất hàng</p>
+              <p class="font-display text-lg font-bold">PX-2607-118</p>
+            </div>
+            <span class="badge bg-brand-50 text-brand-700">Đã giao</span>
+          </div>
+
+          <dl class="mt-6 space-y-3 border-t border-dashed border-line pt-5 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-muted">Khách hàng</dt>
+              <dd class="font-medium">Nhà thầu Anh Hưng</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-muted">Mặt hàng</dt>
+              <dd class="font-medium">Sơn ngoại thất cao cấp</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-muted">Mã Base / Tinh màu</dt>
+              <dd class="font-medium">Base A / 5 ống màu</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-muted">Lô / HSD</dt>
+              <dd class="font-medium">L-205 / 12-2027</dd>
+            </div>
+          </dl>
+
+          <div class="mt-5 flex items-end justify-between border-t border-dashed border-line pt-5">
+            <span class="text-sm text-muted">Thành tiền</span>
+            <span class="font-display text-2xl font-extrabold text-brand-600">18.450.000 ₫</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="doitac-title">
+        <h2 id="doitac-title" class="sr-only">Đang được dùng tại 340 đại lý sơn trên toàn quốc</h2>
+        <ul>
+          <li>Đại lý Sơn Phát Đạt</li>
+          <li>NPP Hưng Thịnh</li>
+          <li>Cửa hàng Ánh Dương</li>
+          <li>Đại lý Màu Sắc Việt</li>
+          <li>Kho sơn Thanh Bình</li>
+        </ul>
+      </section>
+
+      <section id="tinh-nang" aria-labelledby="tinh-nang-title">
+        <p>Tính năng</p>
+        <h2 id="tinh-nang-title">Giải quyết triệt để nỗi lo của đại lý sơn</h2>
+        <p>Không còn thất thoát tinh màu hay lẫn lộn hàng khuyến mãi. Mọi thứ được số hóa trên một hệ thống.</p>
+        <ul>
+          <li>
+            <h3>Quản lý Sơn Base & Tinh màu</h3>
+            <p>Theo dõi chính xác lượng tinh màu đã pha cho từng đơn hàng. Kiểm soát tồn kho sơn Base theo từng mã màu.</p>
+          </li>
+          <li>
+            <h3>Quản lý vỏ thùng & Khuyến mãi</h3>
+            <p>Ghi nhận chặt chẽ số lượng vỏ thùng thu hồi. Quản lý hàng tặng kèm như cọ, rulo để tránh thất thoát.</p>
+          </li>
+          <li>
+            <h3>Kiểm soát Lô & Hạn sử dụng</h3>
+            <p>Cảnh báo tự động các lô sơn sắp hết hạn sử dụng. Gợi ý xuất kho theo chuẩn FIFO (nhập trước xuất trước).</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="cach-hoat-dong" aria-labelledby="cach-title">
+        <p>Cách hoạt động</p>
+        <h2 id="cach-title">Ba thao tác cho một đơn hàng sơn</h2>
+        <ol>
+          <li>
+            <h3>Chọn Base & Tinh màu</h3>
+            <p>Nhập mã màu khách chọn, hệ thống tự động tính toán lượng Base và Tinh màu tương ứng để trừ kho.</p>
+          </li>
+          <li>
+            <h3>Kèm hàng khuyến mãi</h3>
+            <p>Thêm cọ, rulo, băng keo vào đơn hàng với giá 0đ hoặc ghi chú thu hồi vỏ thùng rỗng từ khách thầu.</p>
+          </li>
+          <li>
+            <h3>Chốt phiếu xuất</h3>
+            <p>Phiếu in ra ghi rõ lô hàng, hạn sử dụng. Công nợ khách hàng và tồn kho cập nhật tức thì.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="solieu-title">
+        <h2 id="solieu-title" class="sr-only">Số liệu sử dụng</h2>
+        <dl>
+          <div>
+            <dt>Đại lý đang dùng hằng ngày</dt>
+            <dd>340</dd>
+          </div>
+          <div>
+            <dt>Thùng sơn quản lý mỗi tháng</dt>
+            <dd>1,2 triệu</dd>
+          </div>
+          <div>
+            <dt>Tỷ lệ giảm thất thoát tinh màu</dt>
+            <dd>98%</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="camnhan-title">
+        <h2 id="camnhan-title">Người dùng nói gì</h2>
+        <ul>
+          <li>
+            <figure>
+              <blockquote>"Quản lý lượng tinh màu hao hụt luôn là đau đầu nhất. Từ hồi dùng phần mềm, pha bao nhiêu lít cũng kiểm soát được, không lo thất thoát."</blockquote>
+              <figcaption>
+                <span>Anh Tuấn</span>
+                <cite>Đại lý Sơn Phát Đạt</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <blockquote>"Hàng khuyến mãi như cọ, rulo giờ có báo cáo rõ ràng. Vỏ thùng khách trả lại cũng ghi chú đầy đủ, trừ tiền chính xác."</blockquote>
+              <figcaption>
+                <span>Chị Mai</span>
+                <cite>NPP Hưng Thịnh</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <blockquote>"Sơn cận date tự động báo vàng, giúp tôi ưu tiên xuất kho trước. Không còn cảnh hàng để hỏng trong kho phải bỏ đi."</blockquote>
+              <figcaption>
+                <span>Chú Hùng</span>
+                <cite>Cửa hàng Ánh Dương</cite>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section id="bang-gia" aria-labelledby="gia-title">
+        <p>Bảng giá</p>
+        <h2 id="gia-title">Trả theo quy mô đại lý</h2>
+        <p>Đổi gói bất cứ lúc nào. Mùa xây dựng nâng gói, mùa mưa vắng khách hạ gói.</p>
+        <ul>
+          <li>
+            <h3>Đại lý nhỏ</h3>
+            <p>Một máy pha màu, dưới 50 đơn mỗi ngày.</p>
+            <p>390.000 ₫/tháng</p>
+            <ul>
+              <li>✓ 2 tài khoản sử dụng</li>
+              <li>✓ Quản lý Sơn Base & Tinh màu</li>
+              <li>✓ Cảnh báo hạn sử dụng</li>
+            </ul>
+            <a href="#cta">Chọn gói này</a>
+          </li>
+          <li>
+            <span>Được chọn nhiều nhất</span>
+            <h3>Đại lý vừa</h3>
+            <p>Nhiều máy pha, cần quản lý vỏ thùng & công nợ thầu.</p>
+            <p>890.000 ₫/tháng</p>
+            <ul>
+              <li>✓ 8 tài khoản sử dụng</li>
+              <li>✓ Mọi thứ của gói Đại lý nhỏ</li>
+              <li>✓ Quản lý vỏ thùng & hàng khuyến mãi</li>
+              <li>✓ Báo cáo công nợ nhà thầu</li>
+            </ul>
+            <a href="#cta">Chọn gói này</a>
+          </li>
+          <li>
+            <h3>Chuỗi phân phối</h3>
+            <p>Nhiều chi nhánh kho, cần báo cáo gộp tổng thể.</p>
+            <p>1.990.000 ₫/tháng</p>
+            <ul>
+              <li>✓ Không giới hạn tài khoản</li>
+              <li>✓ Mọi thứ của gói Đại lý vừa</li>
+              <li>✓ Báo cáo gộp nhiều chi nhánh</li>
+              <li>✓ Quản lý luân chuyển kho</li>
+            </ul>
+            <a href="#cta">Liên hệ tư vấn</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="cau-hoi" aria-labelledby="faq-title">
+        <p>Câu hỏi thường gặp</p>
+        <h2 id="faq-title">Điều đại lý hay hỏi trước khi dùng</h2>
+        <p>Chưa thấy câu của mình? Gửi câu hỏi, chúng tôi trả lời trong ngày làm việc.</p>
+        <div>
+          <div>
+            <h3>Phần mềm có kết nối trực tiếp với máy pha màu không?</h3>
+            <p>Hệ thống theo dõi định mức và tồn kho tinh màu dựa trên các đơn đã xuất, chạy độc lập linh hoạt với máy pha để bạn dễ dàng đối soát hao hụt cuối ngày.</p>
+          </div>
+          <div>
+            <h3>Có quản lý được hàng khuyến mãi riêng không?</h3>
+            <p>Rất đơn giản, hàng khuyến mãi như cọ, rulo, áo mưa được khai báo trên hệ thống và tự động trừ kho khi bạn tích chọn tặng kèm trong đơn xuất.</p>
+          </div>
+          <div>
+            <h3>Dữ liệu mã màu và sơn từ file Excel cũ có nhập lên được không?</h3>
+            <p>Có. Bạn chỉ cần gửi file Excel danh sách các hãng sơn và mã màu, đội ngũ hỗ trợ sẽ nhập liệu hoàn toàn miễn phí trong tháng đầu.</p>
+          </div>
+          <div>
+            <h3>Nhân viên bán hàng có thấy được giá vốn của đại lý không?</h3>
+            <p>Không. Hệ thống có tính năng phân quyền chặt chẽ, nhân viên chỉ có thể lên đơn theo giá niêm yết mà không thể xem giá gốc nhập từ hãng.</p>
+          </div>
+          <div>
+            <h3>Việc theo dõi lô và hạn sử dụng có phức tạp không?</h3>
+            <p>Phần mềm tự động gán lô khi bạn nhập hàng. Lúc xuất hàng, hệ thống sẽ ưu tiên gợi ý các lô cận date nhất để xuất trước (nguyên tắc FIFO).</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Quản lý kinh doanh sơn chuyên nghiệp ngay hôm nay</h2>
+        <p>Cài đặt mất 10 phút. Dùng thử 30 ngày, quản lý ngay từ mã màu đến vỏ thùng.</p>
+        <div>
+          <a href="#">Bắt đầu dùng thử</a>
+          <a href="tel:+842873001234">Gọi 028 7300 1234</a>
+        </div>
+      </section>
+    </main>
+
+    <footer aria-labelledby="footer-title">
+      <h2 id="footer-title" class="sr-only">Thông tin chân trang</h2>
+      <div>
+        <div>
+          <a href="./index.html">
+            <span>S</span>
+            <span>Sơn</span>
+          </a>
+          <p>Phần mềm chuyên biệt giúp đại lý kinh doanh sơn quản lý vỏ thùng, tinh màu và hạn sử dụng.</p>
+        </div>
+
+        <nav aria-labelledby="footer-sp">
+          <h3 id="footer-sp">Sản phẩm</h3>
+          <ul>
+            <li><a href="#tinh-nang">Tính năng</a></li>
+            <li><a href="#bang-gia">Bảng giá</a></li>
+            <li><a href="#cach-hoat-dong">Cách hoạt động</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-ht">
+          <h3 id="footer-ht">Hỗ trợ</h3>
+          <ul>
+            <li><a href="#cau-hoi">Câu hỏi thường gặp</a></li>
+            <li><a href="tel:+842873001234">028 7300 1234</a></li>
+            <li><a href="mailto:hotro@phanmemson.vn">hotro@phanmemson.vn</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3>Địa chỉ</h3>
+          <address>
+            128 Nguyễn Văn Cừ, Phường An Hòa<br />
+            Quận Ninh Kiều, Cần Thơ
+          </address>
+        </div>
+      </div>
+      <div>
+        <p>© 2026 Sơn. Bài thực hành môn Thiết kế Web.</p>
+      </div>
+    </footer>
+  </body>
+</html>
