@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Màu sắc theo tài liệu */
+  --color-brand-50: #eff6ff; /* Màu nền phụ trợ cho badge */
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-accent-500: #f59e0b;
+  
+  --color-ink: #1f2937;
+  --color-muted: #6b7280;
+  --color-surface: #f9fafb;
+  --color-surface-alt: #f3f4f6;
+  --color-line: #e5e7eb;
+
+  /* Phông chữ */
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-sans: 'Roboto', sans-serif; /* Đặt Roboto làm mặc định */
+
+  /* Bo góc */
+  --radius-card: 8px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .section { 
+    @apply mx-auto max-w-6xl px-5 py-16 lg:py-24; 
+  }
+  
+  .eyebrow {
+    @apply text-sm font-bold uppercase tracking-wider text-brand-600;
+  }
+
+  .ticket, .card {
+    @apply rounded-[var(--radius-card)] bg-surface p-6 shadow-sm border border-line;
+  }
+
+  .btn {
+    @apply h-10 px-5 inline-flex items-center justify-center rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-6 text-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+  
+  .btn-ghost {
+    @apply text-brand-600 hover:bg-brand-50;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
