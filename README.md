@@ -1,43 +1,70 @@
+# tkw_2551050199_Tai
 # WEBSITE QUẢN LÝ SƠN
-# 1. Đối tượng sử dụng 
-- Đại lý kinh doanh sơn.
-# 2. Giá trị mang lại 
-- Giúp đại lý quản lý vỏ thùng & hàng khuyến mãi.
-- Quản lý sơn Base & Tinh màu
-- Kiểm soát lô và hạn sử dụng
 
-# 3. Thông số trang web
-# WEBSITE
-Màu thương hiệu chính
---color-brand-600: #000000
+# Sản phẩm gì?
+* **Tên sản phẩm:** Phần mềm Quản lý Sơn
+Dưới đây là phần tổng quan dự án website phần mềm quản lý dành riêng cho các đại lý kinh doanh sơn, đồng thời áp dụng chính xác các quy chuẩn thiết kế (Design System):
 
-Màu nhấn
---color-accent-500: #fefefe
+### Đối tượng hướng đến:
+Đại lý kinh doanh sơn.
 
-Chữ chính
---color-ink: #FFFFFF
+### Giá trị mang lại:
+* Giúp đại lý quản lý vỏ thùng & hàng khuyến mãi.
+* Quản lý sơn Base & Tinh màu.
+* Kiểm soát lô và hạn sử dụng.
 
+* **Figma Template:** [Link Figma Landwind - Tailwind CSS Landing Page]
+* **Công nghệ sử dụng:** HTML5 (Semantic HTML), Tailwind CSS (v4), JavaScript (ES6), Git/GitHub.
 
-Chữ phụ
---color-muted: #AAAAA
+---
+## 1. Design System (Quy chuẩn Thiết kế)
 
-Nền trang
---color-surface: #000000
+### Bảng màu (Color Palette)
+#### Màu thương hiệu chính
+--color-brand-600: #2563eb;
 
-Viền
---color-line: #333333
+#### Màu nhấn
+--color-accent-500: #f59e0b;
 
-Phông tiêu đề
---font-display: 'Inter', sans-serif
+#### Chữ chính
+--color-ink: #1f2937;
 
-Phông nội dung
---font-body: 'Roboto', sans-serif;
+#### Chữ phụ
+--color-muted: #6b7280;
 
-H1/H2/H3
-48px / 30px / 20px
-96px (py-24)
+#### Nền trang
+--color-surface: #f9fafb;
 
-Pading dọc section
+#### Viền
+--color-line: #e5e7eb;
 
-Bo góc thẻ
---radius-card: 8px;
+### 2. Font chữ & Cỡ chữ (Typography)
+
+* **Font tiêu đề:** `'Inter', sans-serif`
+* **Font nội dung:** `'Roboto', sans-serif`
+
+#### Kích thước Heading
+* `h1`: `48px`
+* `h2`: `30px`
+* `h3`: `20px`
+
+---
+
+### 📐 3. Bo góc (Border Radius) & Spacing
+
+#### Bảng Quy Đổi Tailwind CSS
+| Figma / Kích thước | Tailwind CSS Class | Ứng dụng |
+| :--- | :--- | :--- |
+| `8px` | `rounded-card` (`rounded-lg`) | Bo góc thẻ |
+| `96px` | `py-24` | Padding dọc section |
+
+---
+
+## 🛠️ 5. Quy trình Git & Workflow
+
+1. **Không push trực tiếp vào `main`.**
+2. Lấy code mới nhất trước khi thực hiện task:
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b feature/ten-tinh-nang
