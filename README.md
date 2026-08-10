@@ -59,6 +59,14 @@ Dưới đây là phần tổng quan dự án website phần mềm quản lý d�
 | `96px` | `py-24` | Padding dọc section |
 
 ---
+Các breakpoint
+sm: sử dụng cho giao diện nhỏ di động.
+md: sử dụng cho máy tính bảng / tablet.
+lg: màn hình máy tính xách tay / laptop.
+xl: màn hình máy tính lớn.
+2xl: dùng cho máy tính cỡ lớn (1280px trở lên).
+
+---
 
 ## 🛠️ 5. Quy trình Git & Workflow
 

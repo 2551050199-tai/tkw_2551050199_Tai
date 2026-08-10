@@ -29,7 +29,7 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4"
          aria-label="Điều hướng chính">
 
-      <a href="./index-v2.html" class="flex items-center gap-2.5">
+      <a href="./index.html" class="flex items-center gap-2.5">
         <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-600
                      font-display text-lg font-extrabold text-white">S</span>
         <span class="font-display text-xl font-extrabold text-ink">Sơn</span>
@@ -38,7 +38,7 @@
       <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
         <li><a href="#tinh-nang" class="text-muted hover:text-brand-600 transition">Tính năng</a></li>
         <li><a href="#cach-hoat-dong" class="text-muted hover:text-brand-600 transition">Cách hoạt động</a></li>
-        <li><a href="#bang-gia" class="text-muted hover:text-brand-600 transition">Bảng giá</a></li>
+        <li><a href="price.html" class="text-muted hover:text-brand-600 transition">Bảng giá</a></li>
         <li><a href="#cau-hoi" class="text-muted hover:text-brand-600 transition">Câu hỏi</a></li>
       </ul>
 
@@ -278,70 +278,7 @@
     </section>
 
 
-    <!-- === BẢNG GIÁ ========================== -->
-    <section id="bang-gia" aria-labelledby="gia-title" class="bg-surface-alt py-24 border-t border-line">
-      <div class="mx-auto max-w-6xl px-5">
-          <div class="text-center max-w-2xl mx-auto mb-16">
-            <p class="eyebrow">Bảng giá linh hoạt</p>
-            <h2 id="gia-title" class="font-display mt-3 text-3xl font-extrabold sm:text-4xl text-ink">Chi phí thấp, hiệu quả cao</h2>
-            <p class="mt-4 text-lg text-muted">Hỗ trợ nâng hạ gói cước theo mùa xây dựng. Minh bạch, không phí ẩn.</p>
-          </div>
-
-          <div class="grid lg:grid-cols-3 items-center gap-8 max-w-5xl mx-auto">
-            <!-- Gói 1 -->
-            <div class="card p-8 border border-line bg-white shadow-sm hover:shadow-md transition">
-              <h3 class="text-xl font-bold font-display text-ink">Đại lý nhỏ</h3>
-              <p class="mt-2 text-sm text-muted">Dành cho 1 máy pha, dưới 50 đơn/ngày.</p>
-              <div class="mt-6 mb-6 pb-6 border-b border-line">
-                  <span class="font-display text-4xl font-extrabold text-ink">390k</span>
-                  <span class="text-muted">/ tháng</span>
-              </div>
-              <ul class="space-y-4 text-sm text-ink mb-8">
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 2 tài khoản truy cập</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Quản lý Base & Tinh màu</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Cảnh báo lô hạn sử dụng</li>
-              </ul>
-              <a href="#cta" class="btn btn-ghost w-full border border-line bg-surface">Chọn gói này</a>
-            </div>
-
-            <!-- Gói 2 (Nổi bật) -->
-            <div class="card p-8 border-2 border-brand-600 bg-white shadow-xl relative scale-105 z-10 rounded-xl">
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                  Phổ biến nhất
-              </div>
-              <h3 class="text-xl font-bold font-display text-ink">Đại lý vừa & lớn</h3>
-              <p class="mt-2 text-sm text-muted">Quản lý chuyên sâu vỏ thùng & công nợ thầu.</p>
-              <div class="mt-6 mb-6 pb-6 border-b border-line">
-                  <span class="font-display text-5xl font-extrabold text-brand-600">890k</span>
-                  <span class="text-muted">/ tháng</span>
-              </div>
-              <ul class="space-y-4 text-sm text-ink mb-8">
-                <li class="flex items-start gap-3 font-medium"><svg class="w-5 h-5 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 8 tài khoản truy cập</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Mọi tính năng của gói Nhỏ</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Quản lý vỏ thùng cược/trả</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Quản lý hàng tặng & khuyến mãi</li>
-              </ul>
-              <a href="#cta" class="btn btn-primary w-full shadow-lg shadow-brand-600/30 py-4 text-lg">Bắt đầu dùng ngay</a>
-            </div>
-
-            <!-- Gói 3 -->
-            <div class="card p-8 border border-line bg-white shadow-sm hover:shadow-md transition">
-              <h3 class="text-xl font-bold font-display text-ink">Chuỗi phân phối</h3>
-              <p class="mt-2 text-sm text-muted">Dành cho NPP nhiều chi nhánh, kho bãi.</p>
-              <div class="mt-6 mb-6 pb-6 border-b border-line">
-                  <span class="font-display text-4xl font-extrabold text-ink">1.990k</span>
-                  <span class="text-muted">/ tháng</span>
-              </div>
-              <ul class="space-y-4 text-sm text-ink mb-8">
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Không giới hạn tài khoản</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Báo cáo gộp đa chi nhánh</li>
-                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Quản lý lệnh luân chuyển kho</li>
-              </ul>
-              <a href="#cta" class="btn btn-ghost w-full border border-line bg-surface">Liên hệ tư vấn</a>
-            </div>
-          </div>
-      </div>
-    </section>
+    
 
     <!-- === CÂU HỎI THƯỜNG GẶP ================ -->
     <section id="cau-hoi" aria-labelledby="faq-title" class="mx-auto max-w-3xl px-5 py-24">
@@ -417,7 +354,7 @@
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
         
         <div class="lg:col-span-1">
-          <a href="./index-v2.html" class="flex items-center gap-2.5">
+          <a href="./index.html" class="flex items-center gap-2.5">
             <span class="grid h-8 w-8 place-items-center rounded bg-brand-600 font-display font-bold text-white">S</span>
             <span class="font-display text-lg font-extrabold text-ink">Sơn</span>
           </a>
