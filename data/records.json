@@ -1,0 +1,47 @@
+[
+    {
+      "id": "PX-2607-118",
+      "trader": "Đại lý Sơn Phát Đạt",
+      "category": "Sơn ngoại thất",
+      "status": "hoan-thanh",
+      "weight": 350,
+      "amount": 18450000,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "PX-2607-119",
+      "trader": "NPP Hưng Thịnh",
+      "category": "Sơn nội thất",
+      "status": "cho-xuong-kho",
+      "weight": 120,
+      "amount": 4200000,
+      "date": "2026-07-27"
+    },
+    {
+      "id": "PX-2607-120",
+      "trader": "Cửa hàng Ánh Dương",
+      "category": "Sơn Base A",
+      "status": "hoan-thanh",
+      "weight": 500,
+      "amount": 25000000,
+      "date": "2026-08-01"
+    },
+    {
+      "id": "PX-2607-121",
+      "trader": "Màu Sắc Việt",
+      "category": "Tinh màu",
+      "status": "da-huy",
+      "weight": 5,
+      "amount": 0,
+      "date": "2026-08-02"
+    },
+    {
+      "id": "PX-2607-122",
+      "trader": "Kho sơn Thanh Bình",
+      "category": "Hàng khuyến mãi",
+      "status": "hoan-thanh",
+      "weight": 10,
+      "amount": 0,
+      "date": "2026-08-05"
+    }
+  ]

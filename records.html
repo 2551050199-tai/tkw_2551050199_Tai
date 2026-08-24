@@ -1,0 +1,49 @@
+<main class="mx-auto max-w-6xl px-5 py-10">
+    <!-- Bộ lọc và Tìm kiếm -->
+    <div class="mb-6 flex gap-4">
+      <input type="text" id="search-input" placeholder="Tìm kiếm tên..." class="border p-2" />
+      <select id="filter-category" class="border p-2">
+        <option value="all">Tất cả loại</option>
+        <option value="Xoài">Xoài</option>
+        <option value="Sầu riêng">Sầu riêng</option>
+      </select>
+      <select id="filter-status" class="border p-2">
+        <option value="all">Tất cả trạng thái</option>
+        <option value="da-chot">Đã chốt</option>
+        <option value="cho-duyet">Chờ duyệt</option>
+      </select>
+      <select id="sort-order" class="border p-2">
+        <option value="date-desc">Mới nhất trước</option>
+        <option value="amount-desc">Giá trị cao nhất</option>
+      </select>
+      <button id="btn-reset" class="btn btn-primary">Khôi phục dữ liệu mẫu</button>
+    </div>
+  
+    <!-- 4 Trạng thái giao diện -->
+    <div id="state-loading" class="text-muted">Đang tải dữ liệu...</div>
+    <div id="state-error" class="hidden text-red-500"></div>
+    <div id="state-empty" class="hidden text-muted">Không tìm thấy bản ghi nào.</div>
+    
+    <table id="state-data" class="hidden w-full text-left text-sm">
+      <thead>
+        <tr class="border-b">
+          <th>Mã</th><th>Tên</th><th>Loại</th><th>Trạng thái</th><th>Số tiền</th><th>Ngày</th><th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  
+    <!-- Template an toàn -->
+    <template id="row-template">
+      <tr class="border-b">
+        <td data-cell="id"></td>
+        <td data-cell="trader"></td>
+        <td data-cell="category"></td>
+        <td data-cell="status"></td>
+        <td data-cell="amount"></td>
+        <td data-cell="date"></td>
+        <td><button class="delete-btn text-red-500">Xóa</button></td>
+      </tr>
+    </template>
+  </main>
+  <script type="module" src="./js/records.js"></script>
