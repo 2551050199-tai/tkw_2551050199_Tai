@@ -40,4 +40,35 @@ export function initNav() {
     });
 }
 
-initNav();
+export function initHeaderOnScroll() {
+    const header = document.getElementById("header");
+    const sentinel = document.getElementById("nav-sentinel");
+    
+    if (!header || !sentinel) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+        const scrolled = !entry.isIntersecting;
+        header.classList.toggle("shadow-md", scrolled);
+    });
+
+    observer.observe(sentinel);
+}
+
+export function initToTop() {
+    const toTopBtn = document.getElementById("to-top");
+    if (!toTopBtn) return;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            toTopBtn.classList.remove("hidden");
+            toTopBtn.classList.add("grid"); 
+        } else {
+            toTopBtn.classList.add("hidden");
+            toTopBtn.classList.remove("grid");
+        }
+    });
+
+    toTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
