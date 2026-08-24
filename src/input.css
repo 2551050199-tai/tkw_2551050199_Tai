@@ -2,7 +2,7 @@
 
 @theme {
   /* Màu sắc theo tài liệu */
-  --color-brand-50: #eff6ff; /* Màu nền phụ trợ cho badge */
+  --color-brand-50: #eff6ff; 
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
   --color-accent-500: #f59e0b;
@@ -16,7 +16,7 @@
   /* Phông chữ */
   --font-display: 'Inter', sans-serif;
   --font-body: 'Roboto', sans-serif;
-  --font-sans: 'Roboto', sans-serif; /* Đặt Roboto làm mặc định */
+  --font-sans: 'Roboto', sans-serif; 
 
   /* Bo góc */
   --radius-card: 8px;
@@ -26,6 +26,16 @@
   body {
     background-color: var(--color-surface);
     color: var(--color-ink);
+  }
+
+  /* Định nghĩa biến màu cho Dark Mode */
+  :root.dark {
+    --color-surface: #111827;      
+    --color-surface-alt: #1f2937;  
+    --color-ink: #f9fafb;          
+    --color-muted: #9ca3af;        
+    --color-line: #374151;         
+    --color-brand-50: #1e3a8a;     
   }
 }
 
@@ -55,6 +65,7 @@
   }
   
   .btn-ghost {
+    /* Đã gỡ bỏ class gây lỗi ở đây, chỉ giữ lại đúng nguyên bản */
     @apply text-brand-600 hover:bg-brand-50;
   }
 

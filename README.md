@@ -59,6 +59,14 @@ Dưới đây là phần tổng quan dự án website phần mềm quản lý d�
 | `96px` | `py-24` | Padding dọc section |
 
 ---
+Các breakpoint
+sm: sử dụng cho giao diện nhỏ di động.
+md: sử dụng cho máy tính bảng / tablet.
+lg: màn hình máy tính xách tay / laptop.
+xl: màn hình máy tính lớn.
+2xl: dùng cho máy tính cỡ lớn (1280px trở lên).
+
+---
 
 ## 🛠️ 5. Quy trình Git & Workflow
 
@@ -68,3 +76,14 @@ Dưới đây là phần tổng quan dự án website phần mềm quản lý d�
    git checkout main
    git pull origin main
    git checkout -b feature/ten-tinh-nang
+
+
+## 6. Checklist Buổi 2
+- [] Đủ 10 section có bố cục, khớp Figma ở màn hình từ 1280px
+- [] Không dùng `absolute` để xếp bố cục chính (chỉ cho badge)
+- [] Không có giá trị spacing tùy ý ngoài scale
+- [] Khoảng cách dùng `gap`, không dùng `margin` trên từng phần tử con
+- [] Ba thẻ bảng giá cao bằng nhau, ba nút thẳng hàng
+- [] Cảm nhận giữ `<figure>` / `<blockquote>` / `<cite>`; số liệu giữ `<dl>`
+- [] Mọi SVG trang trí có `aria-hidden="true"`
+- [] Ít nhất 4 commit, có tag `buoi-2`
