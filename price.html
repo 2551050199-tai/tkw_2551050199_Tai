@@ -109,6 +109,13 @@
       aria-labelledby="gia-title"
       class="bg-surface-alt py-24 border-t border-line"
     >
+    <div class="flex justify-center items-center gap-4 mb-12">
+      <span class="text-sm font-medium text-muted">Thanh toán hàng tháng</span>
+      <button id="pricing-toggle" aria-checked="false" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-brand-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2">
+        <span class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out aria-checked:translate-x-5"></span>
+      </button>
+      <span class="text-sm font-medium text-ink">Thanh toán hàng năm <span class="text-xs text-brand-600 font-bold">(Giảm 10%)</span></span>
+    </div>
       <div class="mx-auto max-w-6xl px-5">
         <div class="text-center max-w-2xl mx-auto mb-16">
           <p class="eyebrow">Bảng giá linh hoạt</p>
@@ -398,7 +405,6 @@
     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
   </button>
 
-  <!-- Replace nav.js with main.js script -->
   <script type="module" src="./js/main.js"></script>
 </body>
 </html>

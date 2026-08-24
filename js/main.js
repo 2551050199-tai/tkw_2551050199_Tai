@@ -4,8 +4,10 @@ import { initFaq } from "./faq.js";
 import { initPricing } from "./pricing.js";
 import { initReveal } from "./reveal.js";
 import { initSlider } from "./slider.js";
+import { initData } from "./data.js";
+import { initValidation } from "./validation.js";
 
-// Initialize all modules
+// Khởi tạo toàn bộ module
 initNav();
 initHeaderOnScroll();
 initToTop();
@@ -14,3 +16,5 @@ initFaq();
 initPricing();
 initReveal();
 initSlider();
+initData();
+initValidation();
